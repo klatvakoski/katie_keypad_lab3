@@ -1,0 +1,8 @@
+#Start recording tcl command: 9/20/2026 11:40:54
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab3_kl; Project name: lab3_kl
+prj_create -name "lab3_kl" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab3_kl/source/impl_1/lab3_top.ldc"
+prj_remove_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab3_kl/source/impl_1/lab3_top.ldc"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_multiplexer_lab2/Radiant_files/lab2_v2kl/lab3_kl/source/impl_1/lab3_top.sv"
+#Stop recording: 9/20/2026 11:45:15
