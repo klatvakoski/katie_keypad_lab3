@@ -1,0 +1,12 @@
+#Start recording tcl command: 9/20/2026 11:47:43
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl; Project name: lab3_kl
+prj_open "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/lab3_kl.rdf"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv"
+prj_save 
+#Stop recording: 9/20/2026 15:58:43

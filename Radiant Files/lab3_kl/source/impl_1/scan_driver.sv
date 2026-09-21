@@ -1,8 +1,8 @@
 module scan_driver(
 	input logic clk, reset,
 	input logic [3:0]col, key, 
-	output logic [3:0] row,
-	output logic [3:0] d0, d1
+	output logic [3:0] d0, d1,
+	output logic scan_signal
 	); 
 	
 	typedef enum logic [2:0] {SCAN = 3'b0001, PRESS = 3'b010, HOLD = 3'b100} statetype;
@@ -27,14 +27,16 @@ module scan_driver(
 		if (reset) begin
 			d0 <= 4'h0; 
 			d1 <= 4'h0; 
+			scan_signal <= 0; 
 		end 
 		else begin 
-			if (state == SCAN && !any_key) // add some sort of signal here that tells my rows to start scanning. once i get a column then debounce/sync that one column and feed it into the decoder
+			if (state == SCAN && !any_key) scan_signal <= 1; // signal here that tells my rows to start scanning. once i get a column then debounce/sync that one column and feed it into the decoder
 			
 			if (state == PRESS) begin
 				d1 <= d0; 	// shifts the digital output 
 				d0 <= key; 
+				scan_signal <= 0; 
 			end 
 		end 
-	
+endmodule 
 	

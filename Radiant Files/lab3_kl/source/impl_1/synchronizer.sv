@@ -1,7 +1,7 @@
 module synchronizer #(parameter WIDTH = 4)(
 	input logic clk, 
 	input logic [WIDTH-1:0]d, 
-	output logic [WIDTH-1:0]d
+	output logic [WIDTH-1:0]q
 	);
 	
 	logic n1;

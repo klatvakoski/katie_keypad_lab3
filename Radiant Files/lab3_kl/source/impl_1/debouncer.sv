@@ -3,7 +3,7 @@ module debouncer(
 	input logic sw,
 	output logic debounce_sw
 	);	
-	// input a switch (that has bounce on it) and you get an output that is debounced
+	// input a switch that's 0 when presssed (that has bounce on it) and you get an output that is debounced
 	
 	logic [19:0] counter; 
 	
@@ -11,7 +11,7 @@ module debouncer(
 	statetype state, nextstate; 
 	
 	always_ff @(posedge clk, posedge reset)
-		if (reset) state <= IDLE; 
+		if (~reset) state <= IDLE; 
 		else state <= nextstate; 
 	
 	always_ff @(posedge clk)
@@ -22,12 +22,12 @@ module debouncer(
 		case (state)
 			IDLE: nextstate = sw ? IDLE:WAIT; // stays in IDLE if 1 (pulling columns low when on), goes to WAIT if 0
 			WAIT: if (sw) nextstate = IDLE; 	// a bounce bc we are going back to 1
-				  else if (counter[19]) nextstate = PRESSED; 
+				  else if (counter[19]) nextstate = PRESSED;   // used 12 for testbench 
 				  else nextstate = WAIT; 		// stay in wait until we get a new sw val
 			PRESSED: nextstate = sw ? IDLE:PRESSED;		// if sw = 1, we are letting go of the button; if sw = 0 button is held
 			default: nextstate = IDLE;
 		endcase 
 	
-	assign debounced_sw = (state = PRESSED); 
+	assign debounce_sw = ~(state == PRESSED); 
 
 endmodule 
