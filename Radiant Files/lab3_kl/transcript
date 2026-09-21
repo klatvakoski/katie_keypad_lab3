@@ -161,3 +161,5 @@ run -all
 # ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(61)
 #    Time: 21220 us  Iteration: 0  Instance: /debouncer_tb
 # Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 61
+# End time: 21:13:26 on Sep 20,2026, Elapsed time: 0:36:07
+# Errors: 0, Warnings: 1

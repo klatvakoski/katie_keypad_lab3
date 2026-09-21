@@ -1,0 +1,7 @@
+#Start recording tcl command: 9/20/2026 18:02:52
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl; Project name: lab3_kl
+prj_open "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/lab3_kl.rdf"
+prj_set_impl_opt -impl "impl_1" {top} {lab3_top}
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv"
+#Stop recording: 9/20/2026 21:13:19
