@@ -882,3 +882,5 @@ run -all
 # ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv(75)
 #    Time: 16122 us  Iteration: 0  Instance: /num_detector_tb
 # Break in Module num_detector_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv line 75
+# End time: 10:51:44 on Sep 21,2026, Elapsed time: 1:11:56
+# Errors: 15, Warnings: 2
