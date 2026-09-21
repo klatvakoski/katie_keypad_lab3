@@ -1,0 +1,73 @@
+{C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module synchronizer
+
+Top level modules:
+	synchronizer
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module led_display
+
+Top level modules:
+	led_display
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module keypad
+
+Top level modules:
+	keypad
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module debouncer_tb
+
+Top level modules:
+	debouncer_tb
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module lab3_top
+
+Top level modules:
+	lab3_top
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module scan_driver
+
+Top level modules:
+	scan_driver
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module num_detector
+
+Top level modules:
+	num_detector
+
+} {} {}} {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv}
+Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+** Note: (vlog-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+-- Compiling module scan_driver_tb
+
+Top level modules:
+	scan_driver_tb
+
+} {} {}}

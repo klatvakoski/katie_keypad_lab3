@@ -1,5 +1,6 @@
 `timescale 1 us/1 ns
 module debouncer_tb();
+	//NEEDS REVISION TO MATCH NEW DEBOUNCER 
 	// test signals
 	logic clk;
 	logic reset;
@@ -25,7 +26,7 @@ module debouncer_tb();
 	reset = 0; 
 	#20; 
 	reset = 1; 
-	sw = 1; #20; 
+	sw = 0; #20; 
 	
 	sw = 0; #5;
 	sw = 1; #5;
@@ -51,12 +52,12 @@ module debouncer_tb();
 	sw = 0; #5;
 	sw = 1; #5; 
 	
-	sw = 0; #20000; 
+	#20000; 
 	
-	assert (debounce_sw === 0) else $error("debounce_sw failed at sw = 0");
+	assert (debounce_sw === 1) else $error("debounce_sw failed at sw = 0");
 	
-	sw = 1; #1000; 
-	assert (debounce_sw === 1) else $error("debounce_sw failed at sw = 1");
+	sw = 0; #1000; 
+	assert (debounce_sw === 0) else $error("debounce_sw failed at sw = 1");
 		
   #100 $stop;
   end

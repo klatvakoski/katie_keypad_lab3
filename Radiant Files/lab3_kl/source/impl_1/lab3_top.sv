@@ -12,7 +12,8 @@ module lab3_top (
    localparam WIDTH = 18;   
    // logic for keypad stuff: 
    logic [3:0] key; 
-   logic scan_signal; 
+   logic scan_signal; 				// this should maybe be enable??? 
+   logic [3:0] debounce_col; 
    
    // logic for mux/seven-seg stuff
    logic s;
@@ -25,9 +26,9 @@ module lab3_top (
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
     
 	// call all of the keypad mods: 
-	scan_driver fsm(int_osc, reset,col, key, disp1, disp2, scan_signal); 
+	scan_driver fsm(int_osc, reset, debounce_col, key, disp1, disp2, scan_signal); 
 	keypad row_scanner(reset, scan_signal, int_osc, row);  // scan_signal used as enable for this mod. 
-	num_detector out_numbers(reset, enable, col, row, int_osc, key);
+	num_detector out_numbers(reset, ~col, row, int_osc, key, debounce_col);
 	
 	
 	// call counter module for switching between the two LED segments

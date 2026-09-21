@@ -13,35 +13,359 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:37:15 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer
-# 
-# Top level modules:
-# 	debouncer
-# End time: 20:37:15 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:37:15 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer_tb
-# 
-# Top level modules:
-# 	debouncer_tb
-# End time: 20:37:15 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -voptargs=+acc work.debouncer work.debouncer_tb
-# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.debouncer work.debouncer_tb 
-# Start time: 20:37:19 on Sep 20,2026
+# Loading project lab3_tbs
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful with warnings.
+# Compile of scan_driver_tb.sv failed with 1 errors.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.scan_driver work.scan_driver_tb -voptargs=+acc -L iCE40UP
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# vsim -gui work.scan_driver work.scan_driver_tb -voptargs="+acc" -L iCE40UP 
+# Start time: 07:26:54 on Sep 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "scan_driver(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "scan_driver(fast__1)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+add wave -position insertpoint  \
+sim:/scan_driver_tb/dut/clk \
+sim:/scan_driver_tb/dut/reset \
+sim:/scan_driver_tb/dut/col \
+sim:/scan_driver_tb/dut/key \
+sim:/scan_driver_tb/dut/d0 \
+sim:/scan_driver_tb/dut/d1 \
+sim:/scan_driver_tb/dut/scan_signal \
+sim:/scan_driver_tb/dut/state \
+sim:/scan_driver_tb/dut/nextstate \
+sim:/scan_driver_tb/dut/any_key
+run -all
+# ** Error: scan failed to stay on reset
+#    Time: 22 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 30
+# ** Error: press failed to appear on cols = 0111
+#    Time: 49 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 39
+# ** Error: HOLD failed to appear on cols = 0111
+#    Time: 54 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 43
+# ** Error: HOLD failed to stay on cols = 0111
+#    Time: 76 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 47
+# ** Error: press failed to appear on cols = 1101
+#    Time: 103 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 55
+# ** Error: press failed to appear on cols = 1111
+#    Time: 108 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 57
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 230 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+run -all
+# ** Error: scan failed to stay on reset
+#    Time: 22 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 30
+# ** Error: press failed to appear on cols = 0111
+#    Time: 49 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 39
+# ** Error: HOLD failed to appear on cols = 0111
+#    Time: 54 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 43
+# ** Error: HOLD failed to stay on cols = 0111
+#    Time: 76 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 47
+# ** Error: press failed to appear on cols = 1101
+#    Time: 103 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 55
+# ** Error: press failed to appear on cols = 1111
+#    Time: 108 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 57
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 230 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "scan_driver(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "scan_driver(fast__1)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+run -all
+# ** Error: HOLD failed to appear on cols = 0111
+#    Time: 54 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 43
+# ** Error: press failed to appear on cols = 1101
+#    Time: 103 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 55
+# ** Error: press failed to appear on cols = 1111
+#    Time: 108 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 57
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 230 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+run -all
+# ** Error: press failed to appear on cols = 1101
+#    Time: 120 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 55
+# ** Error: press failed to appear on cols = 1111
+#    Time: 128 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 57
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 250 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 240 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+add wave -position insertpoint  \
+sim:/scan_driver_tb/key
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# 10 compiles, 0 failed with no errors.
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(63)
+#    Time: 240 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 63
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.scan_driver(fast)
+# Loading work.scan_driver_tb(fast)
+# Loading work.scan_driver(fast__1)
+run -all
+# ** Error: d0 failed to appear on key = 0101
+#    Time: 51 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 41
+# ** Error: d0 failed to appear on key = 1111
+#    Time: 112 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 59
+# ** Error: d1 failed to appear on key = 1111
+#    Time: 112 ns  Scope: scan_driver_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv Line: 60
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv(69)
+#    Time: 240 ns  Iteration: 0  Instance: /scan_driver_tb
+# Break in Module scan_driver_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv line 69
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.num_detector work.num_detector_tb -voptargs=+acc -L iCE40UP
+# End time: 08:54:26 on Sep 21,2026, Elapsed time: 1:27:32
+# Errors: 3, Warnings: 4
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# vsim -gui work.num_detector work.num_detector_tb -voptargs="+acc" -L iCE40UP 
+# Start time: 08:54:26 on Sep 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.num_detector(fast)
+# Loading work.synchronizer(fast__1)
+# Loading work.debouncer(fast__1)
+# Loading work.num_detector_tb(fast)
+# Loading work.num_detector(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.debouncer(fast)
+add wave -position insertpoint  \
+sim:/num_detector_tb/dut/reset \
+sim:/num_detector_tb/dut/col \
+sim:/num_detector_tb/dut/row \
+sim:/num_detector_tb/dut/clk \
+sim:/num_detector_tb/dut/num \
+sim:/num_detector_tb/dut/debounce_col \
+sim:/num_detector_tb/dut/synced_col
+run -all
+# ** Error: num failed on row 0, col 0
+#    Time: 44 ns  Scope: num_detector_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv Line: 32
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv(34)
+#    Time: 144 ns  Iteration: 0  Instance: /num_detector_tb
+# Break in Module num_detector_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv line 34
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.num_detector(fast)
+# Loading work.synchronizer(fast__1)
+# Loading work.debouncer(fast__1)
+# Loading work.num_detector_tb(fast)
+# Loading work.num_detector(fast__1)
+# Loading work.synchronizer(fast)
+# Loading work.debouncer(fast)
+run -all
+# ** Error: num failed on row 0, col 0
+#    Time: 44 ns  Scope: num_detector_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv Line: 32
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv(34)
+#    Time: 144 ns  Iteration: 0  Instance: /num_detector_tb
+# Break in Module num_detector_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv line 34
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.debouncer work.debouncer_tb -voptargs=+acc -L iCE40UP
+# End time: 09:13:28 on Sep 21,2026, Elapsed time: 0:19:02
+# Errors: 1, Warnings: 4
+# ** Note: (vsim-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# vsim -gui work.debouncer work.debouncer_tb -voptargs="+acc" -L iCE40UP 
+# Start time: 09:13:28 on Sep 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast__1)".
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.debouncer(fast)
@@ -57,99 +381,27 @@ sim:/debouncer_tb/dut/state \
 sim:/debouncer_tb/dut/nextstate
 run -all
 # ** Error: debounce_sw failed at sw = 1
-#    Time: 2140 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 59
-# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(61)
-#    Time: 2240 us  Iteration: 0  Instance: /debouncer_tb
-# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 61
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:38:18 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer
-# 
-# Top level modules:
-# 	debouncer
-# End time: 20:38:18 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:38:19 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer_tb
-# 
-# Top level modules:
-# 	debouncer_tb
-# End time: 20:38:19 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:38:48 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer
-# 
-# Top level modules:
-# 	debouncer
-# End time: 20:38:48 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:38:48 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer_tb
-# 
-# Top level modules:
-# 	debouncer_tb
-# End time: 20:38:48 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.debouncer(fast)
-# Loading work.debouncer_tb(fast)
-# Loading work.debouncer(fast__1)
-run -all
-# ** Error: debounce_sw failed at sw = 0
-#    Time: 20120 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 56
-# ** Error: debounce_sw failed at sw = 1
-#    Time: 21120 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 59
-# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(61)
+#    Time: 21120 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 60
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(62)
 #    Time: 21220 us  Iteration: 0  Instance: /debouncer_tb
-# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 61
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:41:30 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer
-# 
-# Top level modules:
-# 	debouncer
-# End time: 20:41:30 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact {C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv}
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 20:41:31 on Sep 20,2026
-# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# -- Compiling module debouncer_tb
-# 
-# Top level modules:
-# 	debouncer_tb
-# End time: 20:41:31 on Sep 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 62
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
 # ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "debouncer(fast__1)".
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -158,8 +410,48 @@ restart -f
 # Loading work.debouncer_tb(fast)
 # Loading work.debouncer(fast__1)
 run -all
-# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(61)
+# ** Error: debounce_sw failed at sw = 0
+#    Time: 20120 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 57
+# ** Error: debounce_sw failed at sw = 1
+#    Time: 21120 us  Scope: debouncer_tb File: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv Line: 60
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(62)
 #    Time: 21220 us  Iteration: 0  Instance: /debouncer_tb
-# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 61
-# End time: 21:13:26 on Sep 20,2026, Elapsed time: 0:36:07
-# Errors: 0, Warnings: 1
+# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 62
+# Compile of counter.sv was successful.
+# Compile of debouncer.sv was successful.
+# Compile of debouncer_tb.sv was successful.
+# Compile of keypad.sv was successful.
+# Compile of lab3_top.sv was successful.
+# Compile of led_display.sv was successful.
+# Compile of num_detector.sv was successful.
+# Compile of scan_driver.sv was successful.
+# Compile of scan_driver_tb.sv was successful.
+# Compile of synchronizer.sv was successful.
+# Compile of num_detector_tb.sv was successful.
+# 11 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims/lab3_tbs.mpf' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.debouncer(fast)
+# Loading work.debouncer_tb(fast)
+# Loading work.debouncer(fast__1)
+run -all
+# ** Note: $stop    : C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv(62)
+#    Time: 21220 us  Iteration: 0  Instance: /debouncer_tb
+# Break in Module debouncer_tb at C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv line 62
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"

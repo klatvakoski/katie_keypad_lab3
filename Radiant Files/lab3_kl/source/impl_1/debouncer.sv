@@ -3,7 +3,7 @@ module debouncer(
 	input logic sw,
 	output logic debounce_sw
 	);	
-	// input a switch that's 0 when presssed (that has bounce on it) and you get an output that is debounced
+	// input a switch that's 1 when presssed (that has bounce on it) and you get an output that is debounced
 	
 	logic [19:0] counter; 
 	
@@ -20,14 +20,14 @@ module debouncer(
 	
 	always_comb 
 		case (state)
-			IDLE: nextstate = sw ? IDLE:WAIT; // stays in IDLE if 1 (pulling columns low when on), goes to WAIT if 0
-			WAIT: if (sw) nextstate = IDLE; 	// a bounce bc we are going back to 1
-				  else if (counter[19]) nextstate = PRESSED;   // used 12 for testbench 
+			IDLE: nextstate = sw ? WAIT:IDLE; // stays in IDLE if 0 ( input will be ~col so that columns high when on), goes to WAIT if 1
+			WAIT: if (!sw) nextstate = IDLE; 	// a bounce bc we are going back to 0
+				  else if (counter[9]) nextstate = PRESSED;   // return to 19
 				  else nextstate = WAIT; 		// stay in wait until we get a new sw val
-			PRESSED: nextstate = sw ? IDLE:PRESSED;		// if sw = 1, we are letting go of the button; if sw = 0 button is held
+			PRESSED: nextstate = sw ? PRESSED:IDLE;		// if sw = 1, we are holding the button; if sw = 0 button is let go
 			default: nextstate = IDLE;
 		endcase 
 	
-	assign debounce_sw = ~(state == PRESSED); 
+	assign debounce_sw = (state == PRESSED); 	// stay high (on) when we are in pressed
 
 endmodule 

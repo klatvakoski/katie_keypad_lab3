@@ -5,14 +5,14 @@ module scan_driver(
 	output logic scan_signal
 	); 
 	
-	typedef enum logic [2:0] {SCAN = 3'b0001, PRESS = 3'b010, HOLD = 3'b100} statetype;
+	typedef enum logic [2:0] {SCAN = 3'b001, PRESS = 3'b010, HOLD = 3'b100} statetype;
 	statetype state, nextstate;
 	logic any_key; 
 	
 	assign any_key = ~&col; 		// ands all of the bits of col together; if a column is low (pushed) then any_key will be 1
 	
 	always_ff @(posedge clk, posedge reset)
-		if (reset) state <= SCAN; 
+		if (~reset) state <= SCAN; 
 		else state <= nextstate; 
 	
 	always_comb
@@ -24,7 +24,7 @@ module scan_driver(
 		endcase
 	
 	always_ff @(posedge clk, posedge reset) 
-		if (reset) begin
+		if (~reset) begin
 			d0 <= 4'h0; 
 			d1 <= 4'h0; 
 			scan_signal <= 0; 
