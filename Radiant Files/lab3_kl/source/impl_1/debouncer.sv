@@ -22,7 +22,7 @@ module debouncer(
 		case (state)
 			IDLE: nextstate = sw ? WAIT:IDLE; // stays in IDLE if 0 ( input will be ~col so that columns high when on), goes to WAIT if 1
 			WAIT: if (!sw) nextstate = IDLE; 	// a bounce bc we are going back to 0
-				  else if (counter[9]) nextstate = PRESSED;   // return to 19
+				  else if (counter[6]) nextstate = PRESSED;   // return to 19
 				  else nextstate = WAIT; 		// stay in wait until we get a new sw val
 			PRESSED: nextstate = sw ? PRESSED:IDLE;		// if sw = 1, we are holding the button; if sw = 0 button is let go
 			default: nextstate = IDLE;

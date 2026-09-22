@@ -1,1 +1,1 @@
-C:/lscc/radiant/2026.1/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 934320 work.scan_driver(fast) work.scan_driver_tb(fast) -quiet -auto_acc_if_foreign -work work -L iCE40UP +acc -allow_unnamed -o _opt -id 7-8cf8c5f820a0-6ab14749-2ad-3a4 +__betafsm
+C:/lscc/radiant/2026.1/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 934320 work.num_detector(fast) work.num_detector_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -L iCE40UP -allow_unnamed -o _opt -id 2-8cf8c5f820a0-6ab1a76c-63-6810 +__betafsm

@@ -1,11 +1,25 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
 R0
 R1
-R0
+Z2 !s12c _opt
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
 R1
 R0
 R1
@@ -13,25 +27,19 @@ R0
 R1
 R0
 R1
-Z2 !s12c _opt2
+R3
+R1
+R3
 R1
 R2
 R1
 R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-Z3 !s12c _opt
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
+R2
 R1
 !s11f vlog 2025.2 2025.05, May 31 2025
 13
@@ -44,328 +52,328 @@ Z4 dC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_k
 T_opt
 !i145 1
 !i144 0
-!s110 1790003018
-VHMJ0bQ=nhfOPC?G]AWC8P1
-04 11 4 work scan_driver fast 0
-04 14 4 work scan_driver_tb fast 0
-=7-8cf8c5f820a0-6ab14749-2ad-3a4
+!s110 1790027628
+V4jX=8A7:K;gRZQPH6kk4Z3
+Z5 04 12 4 work num_detector fast 0
+Z6 04 15 4 work num_detector_tb fast 0
+=2-8cf8c5f820a0-6ab1a76c-63-6810
 R1
-Z5 !s12f OEM25U3 
-Z6 !s12b OEM100
-Z7 !s124 OEM100
-Z8 !s135 nogc
-Z9 o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc
-Z10 tCvgOpt 0 defaultOptions 1107585188
+Z7 !s12f OEM25U13 
+Z8 !s12b OEM100
+Z9 !s124 OEM100
+Z10 !s135 nogc
+Z11 o-quiet -auto_acc_if_foreign -work work +acc -L iCE40UP
+Z12 tCvgOpt 0 defaultOptions 1107585188
 n@_opt
-Z11 OL;O;2025.2;82
+Z13 OL;O;2025.2;82
 R4
 T_opt1
 !i145 1
 !i144 0
 !s110 1790011814
 V`8fPzlV[hQ^6hI;@e_6j<2
-04 12 4 work num_detector fast 0
-04 15 4 work num_detector_tb fast 0
+R5
+R6
 =11-8cf8c5f820a0-6ab169a6-6c-234
 R1
-!s12f OEM25U13 
-R6
 R7
 R8
 R9
 R10
+o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc
+R12
 n@_opt1
-R11
+R13
+R4
 T_opt2
 !i145 1
 !i144 0
-!s110 1790007544
-VLiJePAQ[4lz3T`N<P2X^V1
+!s110 1790028603
+VZ]567eA3EW:R`YSzKE3Y?1
 04 9 4 work debouncer fast 0
 04 12 4 work debouncer_tb fast 0
-=3-8cf8c5f820a0-6ab158f8-ec-1060
+=2-8cf8c5f820a0-6ab1ab3b-c7-61ac
 R1
-R5
-R6
-R7
+!s12f OEM25U3 
 R8
 R9
 R10
-n@_opt2
 R11
-R4
+R12
+n@_opt2
+R13
 vcounter
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv
-Z12 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z13 !s110 1790011789
+Z14 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1790028596
 !i10b 1
 !s100 oDG^HD8bG_`@AFeEdU^N_1
 I8YSjngAWk:mng`9J_dT<80
 S1
-Z14 dC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims
-Z15 w1789945054
+Z15 dC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/questa sims
+Z16 w1789945054
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv
-!i122 222
+!i122 255
 L0 2 27
-Z16 VDg1SIo80bB@j0V0VzS_@n1
-Z17 OL;L;2025.2;82
+Z17 VDg1SIo80bB@j0V0VzS_@n1
+Z18 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z18 !s108 1790011789.000000
+Z19 !s108 1790028596.000000
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/counter.sv|
 !i113 0
-Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z20 tCvgOpt 0 defaultOptions 1085333592
+Z20 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z21 tCvgOpt 0 defaultOptions 1085333592
 vdebouncer
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv
-R12
-R13
-!i10b 1
-!s100 fe<4eH0PTD1R]0>PNTV=n1
-I9>J^Y5`3<2baG=KYhi8SR1
-S1
 R14
-w1790007808
+Z22 !s110 1790028597
+!i10b 1
+!s100 mV_X81SV;Kz79lE`zgEOM1
+Ig`0KzKJc43h:VYSDeMe@e3
+S1
+R15
+w1790027608
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv
-!i122 223
+!i122 256
 L0 1 33
-R16
 R17
+R18
 r1
 !s85 0
 31
-R18
+R19
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer.sv|
 !i113 0
-R19
 R20
+R21
 vdebouncer_tb
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv
-R12
-R13
-!i10b 1
-!s100 9RaGRzM5Wf6L30[VABFP^2
-IPbi@S4]lTI1A1OPm^E]``2
-S1
 R14
-w1790007528
+R22
+!i10b 1
+!s100 bQNEOn0dIDObdUme9k31f2
+IdX9^zSaA6lhMzH5hUd6dJ2
+S1
+R15
+w1790028468
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv
-!i122 224
-L0 2 64
-R16
+!i122 257
+L0 2 63
 R17
+R18
 r1
 !s85 0
 31
-R18
+Z23 !s108 1790028597.000000
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/debouncer_tb.sv|
 !i113 0
-R19
 R20
+R21
 vkeypad
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv
-R12
-Z21 !s110 1790011790
+R14
+R22
 !i10b 1
 !s100 AbDl]U2[83@OB?UDXegSf0
 IRK7E[b6LoHB2T6dDbLC6[0
 S1
-R14
 R15
+R16
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv
-!i122 225
+!i122 258
 L0 1 21
-R16
 R17
+R18
 r1
 !s85 0
 31
-R18
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/keypad.sv|
 !i113 0
-R19
 R20
+R21
 vlab3_top
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv
-R12
-R21
+R14
+R22
 !i10b 1
 !s100 kCVQ6aa;?E;P:N^JjDS^03
 IbDf8S1UE@aGQ<c5Qe`IbT0
 S1
-R14
+R15
 w1790005887
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv
-!i122 226
+!i122 259
 L0 1 50
-R16
 R17
+R18
 r1
 !s85 0
 31
-Z22 !s108 1790011790.000000
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top.sv|
 !i113 0
-R19
 R20
+R21
 vled_display
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv
-R12
-R21
+R14
+R22
 !i10b 1
 !s100 UJMVMAYV0jdYA@oC_Q]aA0
 IL^G0:LlN<OMdGAF^U]`AP0
 S1
-R14
+R15
 w1789931024
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv
-!i122 227
+!i122 260
 L0 1 28
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/led_display.sv|
 !i113 0
-R19
 R20
+R21
 vnum_detector
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv
-R12
-R21
+R14
+R22
 !i10b 1
 !s100 @nbAb;1c3POT<Il1=FVGm3
 ISA4:8L?F=b?=mNeaT98>10
 S1
-R14
+R15
 w1790005958
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv
-!i122 228
+!i122 261
 L0 1 55
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector.sv|
 !i113 0
-R19
 R20
+R21
 vnum_detector_tb
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv
-R12
-R21
+R14
+R22
 !i10b 1
 !s100 _>PEA8QnCV>[T02371H;83
 I:@6JOFSOPoJEQB3A]<9hS1
 S1
-R14
+R15
 w1790011724
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv
-!i122 232
+!i122 262
 L0 2 77
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/num_detector_tb.sv|
 !i113 0
-R19
 R20
+R21
 vscan_driver
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv
-R12
-R21
+R14
+R22
 !i10b 1
 !s100 8Lzd3nIUO11b1i^eOGhNc0
 IU=cBSQ`nT:KZ;Rg06R1O20
 S1
-R14
+R15
 w1790001308
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv
-!i122 229
+!i122 263
 L0 1 41
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver.sv|
 !i113 0
-R19
 R20
+R21
 vscan_driver_tb
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv
-R12
-R21
+R14
+Z24 !s110 1790028598
 !i10b 1
 !s100 kboW]9HS3l:nL3mgokO=:0
 I0EQ=428eMNLIDHVTnnfEQ2
 S1
-R14
+R15
 w1790002873
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv
-!i122 230
+!i122 264
 L0 1 73
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+R23
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/scan_driver_tb.sv|
 !i113 0
-R19
 R20
+R21
 vsynchronizer
 2C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv
-R12
-R21
+R14
+R24
 !i10b 1
 !s100 Kig<V4CO6P2?Ug4;K=]Oh2
 IUe<E]PMRNY^;W<@Q9?cSY3
 S1
-R14
+R15
 w1789953310
 8C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv
 FC:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv
-!i122 231
+!i122 265
 L0 1 14
-R16
 R17
+R18
 r1
 !s85 0
 31
-R22
+!s108 1790028598.000000
 !s107 C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/synchronizer.sv|
 !i113 0
-R19
 R20
+R21

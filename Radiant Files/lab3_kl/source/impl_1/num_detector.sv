@@ -2,55 +2,37 @@ module num_detector (
 	input logic reset,
 	input logic [3:0] col, row,
 	input logic clk,
-	output logic [3:0] num,
-	output logic [3:0] debounce_col
+	output logic [15:0] key,
+	output logic [3:0] synced_row,
+	output logic [3:0] synced_col
 	);
 
-	logic [3:0] synced_col;
+	logic [3:0] synced_col, synced_row;
 	
 	// synchronize the column input 
-	synchronizer #(4) sync(clk, col, synced_col);
+	synchronizer #(4) col_sync(clk, col, synced_col);
 	
-	//debounce the column input 
-	genvar i; 
-	generate 
-		for (i = 0; i < 4; i++) begin : debouncing_loop
-			debouncer debounce(clk, reset, synced_col[i], debounce_col[i]);
-		end
-	endgenerate 
 	
-	// assign each number a bit? 
-	always_comb begin 
-		// row 0
-		if (row[0]) begin 
-			if (debounce_col[0]) num = 4'b0001; 
-			else if (debounce_col[1]) num = 4'b0010; 
-			else if (debounce_col[2]) num = 4'b0011;
-			else if (debounce_col[3]) num = 4'b1010;
-			else num = 4'b0000;		// no latch
-			end 
-		// row 1
-		else if (row[1]) begin 
-			if (debounce_col[0]) num = 4'b0100; 
-			else if (debounce_col[1]) num = 4'b0101; 
-			else if (debounce_col[2]) num = 4'b0110;
-			else if (debounce_col[3]) num = 4'b1011;
-			else num = 4'b0000; 
-			end 
-		else if (row[2]) begin 
-			if (debounce_col[0]) num = 4'b0111; 
-			else if (debounce_col[1]) num = 4'b1000; 
-			else if (debounce_col[2]) num = 4'b1001;
-			else if (debounce_col[3]) num = 4'b1100;
-			else num = 4'b0000; 
-			end 
-		else if (row[3]) begin 
-			if (debounce_col[0]) num = 4'b1110; 
-			else if (debounce_col[1]) num = 4'b0000; 
-			else if (debounce_col[2]) num = 4'b1111;
-			else if (debounce_col[3]) num = 4'b1101;
-			else num = 4'b0000; 
-			end 
-		end 
-endmodule 		
+	// for timing sake, synchronize the row input: 
+	synchronizer #(4) row_sync(clk, row, synced_row);
+	
+	
+	assign key[0] = (row[3] & col[1]);  // keypad input 0
+	assign key[1] = (row[0] & col[0]);	// 1
+	assign key[2] = (row[0] & col[1]);	// 2
+	assign key[3] = (row[0] & col[2]);	// 3
+	assign key[4] = (row[1] & col[0]);	// 4
+	assign key[5] = (row[1] & col[1]);	// 5
+	assign key[6] = (row[1] & col[2]);	// 6
+	assign key[7] = (row[2] & col[0]);	// 7
+	assign key[8] = (row[2] & col[1]);	// 8
+	assign key[9] = (row[2] & col[2]);	// 9
+	assign key[10] = (row[0] & col[3]);	// 10 / A
+	assign key[11] = (row[1] & col[3]);	// 11 / B
+	assign key[12] = (row[2] & col[3]);	// 12 / C
+	assign key[13] = (row[3] & col[3]);	// 13 / D
+	assign key[14] = (row[3] & col[0]);	// 14 / E
+	assign key[15] = (row[3] & col[2]);	// 15 / F
+	
+endmodule 
 	

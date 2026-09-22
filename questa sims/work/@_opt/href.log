@@ -1,3 +1,0 @@
-BEGIN 1:scan_driver:fast__1:work
-    state :  1:scan_driver_tb:fast:work
-END 

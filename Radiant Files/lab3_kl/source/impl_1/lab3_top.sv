@@ -1,6 +1,6 @@
 module lab3_top (
 	input logic reset, 
-	input logic enable, 
+	//input logic enable, 
 	input logic [3:0] col,
 	output logic [3:0] row, 
 	output logic [3:0] disp1, disp2, chosen_disp,
@@ -8,8 +8,8 @@ module lab3_top (
 	output logic [1:0] chosen_pin
 	);
 	
-   localparam MAX_COUNT = 240000; // this is counting twice as fast as my code last time bc HSOSC
-   localparam WIDTH = 18;   
+   localparam MAX_COUNT = 480000; // this is counting twice as fast as my code last time bc HSOSC
+   localparam WIDTH = 20;   
    // logic for keypad stuff: 
    logic [3:0] key; 
    logic scan_signal; 				// this should maybe be enable??? 
