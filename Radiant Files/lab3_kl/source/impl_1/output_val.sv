@@ -3,7 +3,6 @@ module output_val (
 	output logic [3:0] decoded_key; 
 	); 
 	
-	
 	if decoded_key[0] = 4'd0;  // keypad input 0
 	else if decoded_key[1] = 4'd1;	// 1
 	else if decoded_key[2] = 4'd2;

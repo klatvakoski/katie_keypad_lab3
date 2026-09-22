@@ -1,0 +1,7 @@
+#Start recording tcl command: 9/21/2026 14:46:01
+#Project Location: C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl; Project name: lab3_kl
+prj_open "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/lab3_kl.rdf"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/lab3_top_tb.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/output_val.sv"
+prj_add_source "C:/Users/klatvakoski/Documents/GitHub/katie_keypad_lab3/Radiant Files/lab3_kl/source/impl_1/latch_mod.sv"
+#Stop recording: 9/21/2026 21:11:28
