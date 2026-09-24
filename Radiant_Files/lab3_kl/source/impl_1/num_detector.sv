@@ -6,7 +6,7 @@ module num_detector (
 	output logic [3:0] synced_row,
 	output logic [3:0] synced_col
 	);
-
+	// translates rows & cols to key. Assume that col is put in as ~col (i.e. 0001 = col[0] is pressed). 
 	logic [3:0] synced_col, synced_row;
 	
 	// synchronize the column input 
