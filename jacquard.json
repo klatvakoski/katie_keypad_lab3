@@ -1,0 +1,8 @@
+{
+  "top": "scan_driver_tb",
+  "build": {
+    "board": "upduino-v3.1",
+    "top": "lab3_top",
+    "frontend": "slang"
+  }
+}
